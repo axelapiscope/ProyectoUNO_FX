@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ucab.proyectouno_fx.Controller.GameScreens.GameScreenController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="playerTwoContainer" />
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+               <children>
+                  <Button fx:id="playPile" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" />
+                  <Button fx:id="takePile" layoutX="271.0" layoutY="48.0" mnemonicParsing="false" />
+                  <GridPane fx:id="colorPickContainer" alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="botonRojo" mnemonicParsing="false" onAction="#triggerRedSelection" style="-fx-background-color: red;" GridPane.columnIndex="1" />
+                        <Button fx:id="botonAzul" mnemonicParsing="false" onAction="#triggerBlueSelection" style="-fx-background-color: blue;" GridPane.rowIndex="1" />
+                        <Button fx:id="botonVerde" mnemonicParsing="false" onAction="#triggerGreenSelection" style="-fx-background-color: green;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="botonAmarillo" mnemonicParsing="false" onAction="#triggerYellowSelection" style="-fx-background-color: yellow;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <VBox fx:id="playerOneContainer" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="24.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Jugador actual: ">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="13.0" />
+                     </font></Label>
+                  <Label fx:id="humanPlayersNameLabel" text="JUGADOR">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#returnToMainMenu" style="-fx-background-color: maroon;" text="Salir" textFill="#ffd87c">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="24.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</BorderPane>
